@@ -14,8 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val array1: List<Double> = List(5) { it * 1.1 }
-        val array2: List<Double> = List(5) { it * 3.0 }
+        val array1: List<Double> = listOf(0.1, 0.2, 1.5, 1.6, 2.0, 2.0, 3.0)
         // You can test your helper functions by  calling them from onCreate() and
         // printing their output to the Log, which is visible in the LogCat:
         // eg. Log.d("function output", getTestDataArray().toString())
@@ -80,5 +79,14 @@ class MainActivity : AppCompatActivity() {
 
         return textView
     }
+
+    private fun getView2(position: Int, recycledView: View?, collection: List<Int>, context: Context): View =
+        (recycledView as? TextView ?: TextView(context).apply{
+            setPadding(10, 10, 10, 10)
+            textSize = 22f
+        }).apply{
+            text = collection[position].toString()
+        }
+
 
 }
