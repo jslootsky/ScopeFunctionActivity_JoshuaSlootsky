@@ -22,7 +22,10 @@ class MainActivity : AppCompatActivity() {
         Log.d("function 1 output modified", getTestDataArray2().toString())
 
         Log.d("function 2 output original", averageLessThanMedian(array1).toString())
-        Log.d("function 2 output original", averageLessThanMedian2(array1).toString())
+        Log.d("function 2 output modified", averageLessThanMedian2(array1).toString())
+
+        Log.d("function 3 output original", "${getView(0, null, listOf(1,2,3), this)}")
+        Log.d("function 3 output modified", "${getView2(0, null, listOf(1,2,3), this)}")
     }
 
 
